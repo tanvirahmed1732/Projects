@@ -7,7 +7,7 @@ from PIL import Image
 image_dir = r'D:\Code\GitHub\Projects\Digit Recognition\Images'
 
 # List of groups and digits
-groups = [f'G{i}' for i in range(1, 11)]
+groups = [f'G{i}' for i in range(1, 13)]
 digits_english = [f'E{digit}' for digit in range(10)]  # English digits E0 to E9
 digits_bangla = [f'B{digit}' for digit in range(10)]  # Bangla digits B0 to B9
 
@@ -34,7 +34,7 @@ for group in groups:
                 data.append(np.append(flattened_image, f'{language}{digit}'))
 
 # Convert data to numpy array
-data = np.array(data)
+data = np.array(data) 
 
 # Define the ARFF header with both Bangla and English digits
 attributes = [f'pixel{i+1}' for i in range(data.shape[1] - 1)]  # Create attribute names for each pixel
