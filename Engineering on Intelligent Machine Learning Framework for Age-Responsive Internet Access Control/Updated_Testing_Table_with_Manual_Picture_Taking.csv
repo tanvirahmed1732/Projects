@@ -1,0 +1,9 @@
+Test Case ID,Test Scenario,Test Steps,Expected Result,Actual Result,Status,Testing Score (Out of 10)
+TC001,Face Scan Initialization,Open the app and initiate face scan (User manually takes the picture),Camera opens and begins scanning,Camera opens correctly,Pass,9.5
+TC002,Face Not Detected,Try scanning with camera blocked (User manually takes the picture),Error shown: 'Face not detected',Error shown,Pass,9.0
+TC003,Age Detection (Under 18),Scan a teen user face (User manually takes the picture),Age estimated < 18,Age correctly estimated < 18,Pass,9.8
+TC004,Age Detection (Adult),Scan an adult user face (User manually takes the picture),Age estimated ≥ 18,Age correctly estimated ≥ 18,Pass,9.7
+TC005,App Restriction (Minor),Login as user < 18 (User manually takes the picture),Restricted apps are hidden or locked,Access blocked,Pass,9.2
+TC006,Full Access (Adult),Login as user ≥ 18 (User manually takes the picture),"All apps accessible, customization enabled",Access allowed,Pass,9.9
+TC007,Customization Feature,Adult user sets allowed apps for minors (User manually takes the picture),Minor user sees only allowed apps,App list is filtered correctly,Pass,9.6
+TC008,Permission Denied (Camera) - Manual Picture Required,User must manually take a picture after enabling camera permission (User manually takes the picture),App prompts user to enable camera,Prompt displayed,Pass,9.4
